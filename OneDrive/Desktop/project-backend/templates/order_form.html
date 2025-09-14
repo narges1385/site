@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>فرم سفارش</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>ثبت سفارش</h2>
+    <form action="/order" method="post">
+        <label>نام مشتری:</label>
+        <input type="text" name="customer_name" required><br>
+
+        <label>نام محصول:</label>
+        <input type="text" name="product_name" required><br>
+
+        <label>مبلغ (تومان):</label>
+        <input type="number" name="amount" required><br>
+
+        <button type="submit">ثبت و پرداخت</button>
+    </form>
+</body>
+</html>

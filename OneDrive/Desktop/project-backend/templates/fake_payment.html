@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>پرداخت تستی</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>پرداخت تستی</h2>
+    <p>سفارش: {{ order.product_name }}</p>
+    <p>مبلغ: {{ order.amount }} تومان</p>
+    <a href="/confirm/{{ order.id }}">
+        <button>تأیید پرداخت (تستی)</button>
+    </a>
+</body>
+</html>

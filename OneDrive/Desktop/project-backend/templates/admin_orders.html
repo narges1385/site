@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>لیست سفارش‌ها</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>سفارش‌های ثبت‌شده</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>شناسه</th>
+                <th>نام مشتری</th>
+                <th>محصول</th>
+                <th>مبلغ</th>
+                <th>وضعیت پرداخت</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.customer_name }}</td>
+                <td>{{ order.product_name }}</td>
+                <td>{{ order.amount }}</td>
+                <td>{{ 'پرداخت شده' if order.paid else 'در انتظار پرداخت' }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
